@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 zalet pana Jędrzeja Niczyja</title>
+  <style>
+    :root {
+      --bg1: #020617;
+      --bg2: #0f172a;
+      --bg3: #1d4ed8;
+      --card: rgba(15, 23, 42, 0.52);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #22d3ee;
+      --accent2: #a78bfa;
+      --border: rgba(148, 163, 184, 0.34);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.25) 0%, transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.24) 0%, transparent 40%),
+        radial-gradient(circle at 80% 90%, rgba(59, 130, 246, 0.26) 0%, transparent 45%),
+        linear-gradient(135deg, var(--bg1), var(--bg2) 45%, var(--bg3));
+      background-size: 150% 150%;
+      animation: bgShift 14s ease-in-out infinite alternate;
+      padding: 28px;
+      overflow-x: hidden;
+    }
+    main {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px) saturate(125%);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 28px 70px rgba(2, 6, 23, 0.55);
+      position: relative;
+      isolation: isolate;
+    }
+    main::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(120deg, rgba(34, 211, 238, 0.5), rgba(167, 139, 250, 0.45), rgba(56, 189, 248, 0.45));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #020617;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      margin-bottom: 8px;
+      box-shadow: 0 10px 24px rgba(34, 211, 238, 0.28);
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      background: linear-gradient(95deg, #e2e8f0, #bae6fd 45%, #ddd6fe);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    ol {
+      list-style: none;
+      counter-reset: item;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px 14px;
+    }
+    li {
+      counter-increment: item;
+      position: relative;
+      padding: 10px 12px 10px 52px;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 12px;
+      background: rgba(30, 41, 59, 0.55);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      animation: cardIn 480ms ease both;
+      animation-delay: calc(counter(item) * 10ms);
+    }
+    li::before {
+      content: counter(item);
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: linear-gradient(180deg, #22d3ee, var(--accent));
+      color: #082f49;
+      box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.45);
+    }
+    li:hover {
+      transform: translateY(-2px);
+      border-color: rgba(34, 211, 238, 0.55);
+      background: rgba(30, 41, 59, 0.76);
+      box-shadow: 0 12px 24px rgba(8, 47, 73, 0.28);
+    }
+    @keyframes bgShift {
+      from {
+        background-position: 0% 50%;
+      }
+      to {
+        background-position: 100% 50%;
+      }
+    }
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">Nowoczesna lista</span>
+    <h1>100 zalet pana Jędrzeja Niczyja</h1>
+    <p>Lista pozytywnych cech i atutów:</p>
+    <ol>
+      <li>Jest uprzejmy.</li>
+      <li>Jest punktualny.</li>
+      <li>Ma poczucie humoru.</li>
+      <li>Jest odpowiedzialny.</li>
+      <li>Jest pracowity.</li>
+      <li>Szanuje innych ludzi.</li>
+      <li>Jest cierpliwy.</li>
+      <li>Jest słowny.</li>
+      <li>Jest życzliwy.</li>
+      <li>Potrafi słuchać.</li>
+      <li>Jest uczciwy.</li>
+      <li>Jest lojalny.</li>
+      <li>Ma pozytywne nastawienie.</li>
+      <li>Jest ambitny.</li>
+      <li>Jest kreatywny.</li>
+      <li>Jest opanowany.</li>
+      <li>Umie pracować zespołowo.</li>
+      <li>Jest dobrze zorganizowany.</li>
+      <li>Jest empatyczny.</li>
+      <li>Ma dobre maniery.</li>
+      <li>Jest konsekwentny.</li>
+      <li>Jest wytrwały.</li>
+      <li>Potrafi motywować innych.</li>
+      <li>Jest pomocny.</li>
+      <li>Jest komunikatywny.</li>
+      <li>jest łysy.</li>
+      <li>Jest pogodny.</li>
+      <li>Jest zdecydowany.</li>
+      <li>Jest rzetelny.</li>
+      <li>Jest godny zaufania.</li>
+      <li>Ma szeroką wiedzę.</li>
+      <li>Szybko się uczy.</li>
+      <li>Jest otwarty na nowe pomysły.</li>
+      <li>Jest samodzielny.</li>
+      <li>Potrafi przyznać się do błędu.</li>
+      <li>Jest tolerancyjny.</li>
+      <li>Jest odważny.</li>
+      <li>Jest uczynny.</li>
+      <li>Jest cierpliwy wobec innych.</li>
+      <li>Jest obowiązkowy.</li>
+      <li>Jest systematyczny.</li>
+      <li>Ma silny charakter.</li>
+      <li>Jest serdeczny.</li>
+      <li>Jest inteligentny.</li>
+      <li>Jest skromny.</li>
+      <li>Jest kulturalny.</li>
+      <li>Umie rozwiązywać problemy.</li>
+      <li>Jest sumienny.</li>
+      <li>Jest pełen energii.</li>
+      <li>Jest inspirujący.</li>
+      <li>Jest odpowiedzialny społecznie.</li>
+      <li>Jest spokojny w trudnych sytuacjach.</li>
+      <li>Jest dokładny.</li>
+      <li>Jest otwarty na dialog.</li>
+      <li>Szanuje cudze zdanie.</li>
+      <li>Jest punktualny i zdyscyplinowany.</li>
+      <li>Jest godny podziwu.</li>
+      <li>Ma dobrą intuicję.</li>
+      <li>Jest pełen szacunku.</li>
+      <li>Jest niezawodny.</li>
+      <li>Jest pragmatyczny.</li>
+      <li>Jest opiekuńczy.</li>
+      <li>Jest zaradny.</li>
+      <li>Umie planować.</li>
+      <li>Jest rozsądny.</li>
+      <li>Jest pełen pasji.</li>
+      <li>Ma wysoką kulturę osobistą.</li>
+      <li>Jest uczciwy w relacjach.</li>
+      <li>Jest pozytywnym przykładem dla innych.</li>
+      <li>Umie działać pod presją.</li>
+      <li>Jest wyrozumiały.</li>
+      <li>Jest pomysłowy.</li>
+      <li>Jest konsekwentny w działaniu.</li>
+      <li>Jest zaangażowany.</li>
+      <li>Jest aktywny.</li>
+      <li>Jest wiarygodny.</li>
+      <li>Jest rozsądnie pewny siebie.</li>
+      <li>Umie budować dobre relacje.</li>
+      <li>Jest oddany swoim celom.</li>
+      <li>Jest wspierający.</li>
+      <li>Jest otwarty na krytykę.</li>
+      <li>Jest elastyczny.</li>
+      <li>Jest odpowiedzialny za swoje decyzje.</li>
+      <li>Jest odporny na stres.</li>
+      <li>Jest uważny.</li>
+      <li>Jest dociekliwy.</li>
+      <li>Jest optymistą.</li>
+      <li>Jest uczciwy wobec siebie.</li>
+      <li>Jest szczery.</li>
+      <li>Jest mądry życiowo.</li>
+      <li>Jest przyjacielski.</li>
+      <li>Jest zdyscyplinowany.</li>
+      <li>Jest wszechstronny.</li>
+      <li>Jest kompetentny.</li>
+      <li>Jest pomocny na co dzień.</li>
+      <li>Jest pełen dobrej woli.</li>
+      <li>Jest szczodry.</li>
+      <li>Jest uprzejmy nawet w trudnych chwilach.</li>
+      <li>Jest osobą, na którą można liczyć.</li>
+      <li>Budzi sympatię i zaufanie.</li>
+    </ol>
+  </main>
+
+
+<protonpass-root-7d12 data-protonpass-role="root" data-protonpass-theme="os"></protonpass-root-7d12></body></html>
